@@ -16,132 +16,187 @@
  * Seguro que al revisar detenidamente las posibilidades has descubierto algo nuevo.
  */
 
+import java.util.Arrays;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.HashSet;
+import java.util.Set;
+
 public class Ejercicio2 {
     public static void main(String[] args) {
         int dato1 = 4;
         int dato2 = 2;
-        int dato3= dato1+dato2;
+        int dato3 = dato1 + dato2;
         System.out.println(dato3);
-        System.out.println(dato1+dato2);
+        System.out.println(dato1 + dato2);
 
         int valor1 = 10;
         int valor2 = 3;
-        int valor3= valor1-valor2;
+        int valor3 = valor1 - valor2;
         System.out.println(valor3);
-        System.out.println(valor1-valor2);
+        System.out.println(valor1 - valor2);
 
-        int multiplicacion1= 10;
-        int multiplicacion2= 3;
-        int resultadoMultiplicacion= multiplicacion1*multiplicacion2;
+        int multiplicacion1 = 10;
+        int multiplicacion2 = 3;
+        int resultadoMultiplicacion = multiplicacion1 * multiplicacion2;
         System.out.println(resultadoMultiplicacion);
-        System.out.println(multiplicacion1*multiplicacion2);
+        System.out.println(multiplicacion1 * multiplicacion2);
 
-        int division1= 8;
-        int division2= 4;
-        double division3= 10;
-        double division4= 3;
-        double resultadoDivison2= division3/division4;
-        int resultadoDivision= division1/division2;
+        int division1 = 8;
+        int division2 = 4;
+        double division3 = 10;
+        double division4 = 3;
+        double resultadoDivison2 = division3 / division4;
+        int resultadoDivision = division1 / division2;
         System.out.println(resultadoDivision);
-        System.out.println(division1/division2);
+        System.out.println(division1 / division2);
         System.out.println(resultadoDivison2);
-        System.out.println(division3/division4);
-        //para decimales es mejor usar float debido a que no necesitamos mucho a menos que trabajemos con cantidades largas
-        //Los lenguajes de programación no san tan exactos con solo operaciones sencillas
-        float division5= 10f;
-        float division6= 3f;
-        float resultadoFloat= division5/division6;
+        System.out.println(division3 / division4);
+        // para decimales es mejor usar float debido a que no necesitamos mucho a menos
+        // que trabajemos con cantidades largas
+        // Los lenguajes de programación no san tan exactos con solo operaciones
+        // sencillas
+        float division5 = 10f;
+        float division6 = 3f;
+        float resultadoFloat = division5 / division6;
         System.out.println(resultadoFloat);
-        
 
-        int modulo1= 10;
-        int modulo2= 2;
-        int modulo3= 3;
-        int resultadoModulo= modulo1%modulo2;
-        int resultadoModulo2= modulo1%modulo3;
+        int modulo1 = 10;
+        int modulo2 = 2;
+        int modulo3 = 3;
+        int resultadoModulo = modulo1 % modulo2;
+        int resultadoModulo2 = modulo1 % modulo3;
         System.out.println(resultadoModulo);
         System.out.println(resultadoModulo2);
         System.out.println(modulo1 % modulo2);
-        System.out.println(modulo1%modulo3);
+        System.out.println(modulo1 % modulo3);
 
-        //En java para hacer el exponente se puede hacer de dos maneras
+        // En java para hacer el exponente se puede hacer de dos maneras
         /*
          * Primera forma: Aplicamos el Math.pow (base*exponente)
-         * Segunda forma: Hacerlo del modo clásico= base*base, cubo= base*base*base, etc.
-        */
+         * Segunda forma: Hacerlo del modo clásico= base*base, cubo= base*base*base,
+         * etc.
+         */
 
-        //El método Math.pow siempre retorna un double, incluso si la base y el exponente son enteros.
-        int baseExponente= 4;
-        int exponente= 2;
-        double resultadoExponente= Math.pow(baseExponente, exponente);
+        // El método Math.pow siempre retorna un double, incluso si la base y el
+        // exponente son enteros.
+        int baseExponente = 4;
+        int exponente = 2;
+        double resultadoExponente = Math.pow(baseExponente, exponente);
         System.out.println(resultadoExponente);
-        int resultadoExponente2= 4*4;
+        int resultadoExponente2 = 4 * 4;
         System.out.println("El resultado de 4 al cuadrado es: " + resultadoExponente2);
 
-        //a diferencia de JavaScript, aquí si mantenemos la division en int, nos dará ese
-        //a pesar de ser un resultado decimal, esto nos devolverá solo la parte entera de la división
-        int divisionEntera= 10/3;
+        // a diferencia de JavaScript, aquí si mantenemos la division en int, nos dará
+        // ese
+        // a pesar de ser un resultado decimal, esto nos devolverá solo la parte entera
+        // de la división
+        int divisionEntera = 10 / 3;
         System.out.println(divisionEntera);
 
-        boolean dataBase= 4==2;
+        boolean dataBase = 4 == 2;
         System.out.println(dataBase);
-        boolean dataBase2= 4!=2;
+        boolean dataBase2 = 4 != 2;
         System.out.println(dataBase2);
-        boolean dataBase3= 4<8;
+        boolean dataBase3 = 4 < 8;
         System.out.println(dataBase3);
-        boolean database4= 4>9;
+        boolean database4 = 4 > 9;
         System.out.println(database4);
-        //Dato importante: El igual siempre debe estar a la derecha a menos que quieras ver los números superiores (se hace infinito y te petará la pc)
-        boolean database5= 4<=4;
+        // Dato importante: El igual siempre debe estar a la derecha a menos que quieras
+        // ver los números superiores (se hace infinito y te petará la pc)
+        boolean database5 = 4 <= 4;
         System.out.println(database5);
-        boolean database6= 120>=119;
+        boolean database6 = 120 >= 119;
         System.out.println(database6);
 
         System.out.println("Operadores Lógicos");
-        int logica1= 10;
-        int logica2= 4;
-        int logica3= 20;
-        int logica4= 10;
-        //&& es AND
-        System.out.println(logica1<logica3 && logica2<logica4);
-        //dice logica1 NO es menor que logica2
-        System.out.println(!(logica1<logica2));
-        System.out.println(logica1<logica3 || logica1<logica2);
+        int logica1 = 10;
+        int logica2 = 4;
+        int logica3 = 20;
+        int logica4 = 10;
+        // && es AND
+        System.out.println(logica1 < logica3 && logica2 < logica4);
+        // dice logica1 NO es menor que logica2
+        System.out.println(!(logica1 < logica2));
+        System.out.println(logica1 < logica3 || logica1 < logica2);
 
         System.out.println("Operadores de Asignación");
 
-        int operadorIgual= 4;
+        int operadorIgual = 4;
         System.out.println(operadorIgual);
-        int operadorSuma= 2;
-        operadorSuma+= 1;
-        operadorSuma+= 1;
-        operadorSuma+= 1;
-        operadorSuma+= 1;
-        operadorSuma+= 1;
+        int operadorSuma = 2;
+        operadorSuma += 1;
+        operadorSuma += 1;
+        operadorSuma += 1;
+        operadorSuma += 1;
+        operadorSuma += 1;
         System.out.println(operadorSuma);
-        int operadorResta= 100;
-        operadorResta-=10;
-        operadorResta-=10;
-        operadorResta-=10;
-        operadorResta-=10;
-        operadorResta-=10;
+        int operadorResta = 100;
+        operadorResta -= 10;
+        operadorResta -= 10;
+        operadorResta -= 10;
+        operadorResta -= 10;
+        operadorResta -= 10;
         System.out.println(operadorResta);
-        int operadorMultiplicacion= 2;
-        operadorMultiplicacion*=2;
-        operadorMultiplicacion*=2;
-        operadorMultiplicacion*=2;
-        operadorMultiplicacion*=2;
-        operadorMultiplicacion*=2;
-        operadorMultiplicacion*=2;
+        int operadorMultiplicacion = 2;
+        operadorMultiplicacion *= 2;
+        operadorMultiplicacion *= 2;
+        operadorMultiplicacion *= 2;
+        operadorMultiplicacion *= 2;
+        operadorMultiplicacion *= 2;
+        operadorMultiplicacion *= 2;
         System.out.println(operadorMultiplicacion);
-        int operadorDivision= 128;
-        operadorDivision/= 2;
-        operadorDivision/= 2;
-        operadorDivision/= 2;
-        operadorDivision/= 2;
-        operadorDivision/= 2;
+        int operadorDivision = 128;
+        operadorDivision /= 2;
+        operadorDivision /= 2;
+        operadorDivision /= 2;
+        operadorDivision /= 2;
+        operadorDivision /= 2;
         System.out.println(operadorDivision);
 
-    }
+        System.out.println("Pertenencia");
+        List<String> nombres = new ArrayList<>();
+        nombres.add("Jonanth");
+        nombres.add("Yamada");
+        nombres.add("Ishikawa");
+        String buscado = "Jonanth";
+        boolean existe = nombres.contains(buscado);
+        System.out.println("El nombre de " + buscado + " está en la lista? " + existe);
+        System.out.println("El nombre de " + buscado + " está en la lista? " + existe);
 
+        Map<String, Integer> edadesPotato = new HashMap<>();
+        edadesPotato.put("Juan", 30);
+        edadesPotato.put("Camilo", 40);
+        edadesPotato.put("Gabriela", 18);
+
+        String claveBuscada = "Gabriela";
+        boolean claveExiste = edadesPotato.containsKey(claveBuscada);
+        int valorBuscado = 18;
+        boolean valorExiste = edadesPotato.containsValue(valorBuscado);
+        System.out.println("La clave : " + claveBuscada + " está en el mapa? " + claveExiste);
+        System.out.println(" El valor buscado : " + valorBuscado + " está en el mapa? " + valorExiste);
+
+        Set<String> frutas = new HashSet<>();
+        frutas.add("Manzana");
+        frutas.add("Banana");
+        frutas.add("Pera");
+
+        String frutaBuscada = "Patata";
+        boolean frutaExiste = frutas.contains(frutaBuscada);
+        System.out.println("La fruta " + frutaBuscada + " está en el Set?? " + frutaExiste);
+
+        int[] numeros = { 1, 2, 3, 4, 5 };
+
+        // Simulando "in" con Arrays.stream()
+        boolean Existe = Arrays.stream(numeros).anyMatch(n -> n == 3);
+
+        if (Existe) {
+            System.out.println("El número 3 está en el array.");
+        } else {
+            System.out.println("El número 3 NO está en el array.");
+        }
+
+    }
 }
